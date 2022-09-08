@@ -43,7 +43,7 @@ html::-webkit-scrollbar-thumb:hover {
 .container {
     /* Padding for mobile view */
     padding-left: 2rem;
-    padding-right: 3rem;
+    padding-right: 2rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -72,4 +72,13 @@ html::-webkit-scrollbar-thumb:hover {
     .container {
         width: 1470px;
     }
+}
+.__btn{
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: .5rem 2rem;
+    border-radius: 10px;
+}
+.btn{
+    display: none;
 }
