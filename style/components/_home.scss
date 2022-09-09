@@ -7,6 +7,7 @@
     display: flex;
     gap: 6rem;
     align-items: stretch;
+    height: 555px;
 }
 
 .content__header {
@@ -115,6 +116,7 @@
 }
 @media (width < 786px) {
     .dept__body{
+        height: auto;
         flex-direction: column;
         .dept__sidebar{
             flex-direction: row;
