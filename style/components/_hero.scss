@@ -118,10 +118,11 @@ header {
 }
 @media(width < 768px){
     .header__Search{
-        
+        padding: 2rem;
         width: 100%;
         form{
             flex-direction: column;
+            gap: 1.1rem;
             input{
                 width: 100%;
             }

@@ -1,17 +1,18 @@
-let navbarToggle = document.querySelector(".toggle i");
-let closeSideMenu = document.querySelector(".close i");
-let sideMenu = document.querySelector(".links");
-let overlay = document.querySelector(".overlay");
-let searchForm = document.querySelector(".search-form");
-let searchBtn = document.querySelector(".search i");
-let deptBtn1 = document.getElementById("dept1");
-let deptBtn2 = document.getElementById("dept2");
-let deptBtn3 = document.getElementById("dept3");
-let deptBtn4 = document.getElementById("dept4");
-let deptBtn5 = document.getElementById("dept5");
-let deptBtn6 = document.getElementById("dept6");
-let deptBody = document.querySelector(".dept__content");
-let deptSidebar = document.querySelectorAll(".dept__sidebar li");
+const navbarToggle = document.querySelector(".toggle i");
+const closeSideMenu = document.querySelector(".close i");
+const sideMenu = document.querySelector(".links");
+const overlay = document.querySelector(".overlay");
+const searchForm = document.querySelector(".search-form");
+const searchBtn = document.querySelector(".search i");
+const deptBtn1 = document.getElementById("dept1");
+const deptBtn2 = document.getElementById("dept2");
+const deptBtn3 = document.getElementById("dept3");
+const deptBtn4 = document.getElementById("dept4");
+const deptBtn5 = document.getElementById("dept5");
+const deptBtn6 = document.getElementById("dept6");
+const deptBody = document.querySelector(".dept__content");
+const deptSidebar = document.querySelectorAll(".dept__sidebar li");
+
 
 if (navbarToggle) {
   navbarToggle.addEventListener("click", () => {
@@ -229,7 +230,7 @@ deptSidebar.forEach((el)=>{
 })
 function RemoveClassActive(){
   deptSidebar.forEach((el)=>{
-    el.classList.remove('active');
-    this.classList.add('active')
+    el.classList.remove('active1');
+    this.classList.add('active1')
   })
 }
