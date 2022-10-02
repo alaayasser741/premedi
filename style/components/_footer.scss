@@ -27,6 +27,12 @@ footer{
     span{
         display: block;
         margin-block-end: 1rem;
+        a{
+            color: #ccc;
+            &:hover{
+                color: #fff;
+            }
+        }
         i{
             margin-inline-end: .7rem;
         }
