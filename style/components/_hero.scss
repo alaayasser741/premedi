@@ -1,24 +1,14 @@
 header {
-    min-height: calc(100vh - 125px);
-    background: url("../../images/Landing_bg.jpg") no-repeat center, var(--light-grey);
-    background-size: cover;
+    min-height: calc(75vh);
+    background: url("../images/background.jpg") no-repeat center/cover, var(--light-grey);
 
     .container {
-        position: relative;
-        min-height: calc(100vh - 125px);
+        display: flex;
+        justify-content: center;
     }
 }
-
-.header__overlay {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 125px);
-    background-color: #000;
-    opacity: .5;
-}
-
 .header__body {
-    min-height: calc(100vh - 125px);
+    min-height: calc(75vh);
     padding: 5rem 0;
     width: 100%;
     display: flex;
@@ -34,7 +24,7 @@ header {
     flex-direction: column;
     height: 100%;
     justify-content: center;
-
+    text-shadow: -2px 2px 0px rgba(0,0,0,0.23);
     h2 {
         font-size: 3.75rem;
         margin-bottom: 3rem;
