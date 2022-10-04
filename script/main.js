@@ -1,9 +1,4 @@
-const navbarToggle = document.querySelector(".toggle i");
-const closeSideMenu = document.querySelector(".close i");
-const sideMenu = document.querySelector(".links");
-const overlay = document.querySelector(".overlay");
-const searchForm = document.querySelector(".search-form");
-const searchBtn = document.querySelector(".search i");
+
 const deptBtn1 = document.getElementById("dept1");
 const deptBtn2 = document.getElementById("dept2");
 const deptBtn3 = document.getElementById("dept3");
@@ -14,28 +9,6 @@ const deptBody = document.querySelector(".dept__content");
 const deptSidebar = document.querySelectorAll(".dept__sidebar li");
 
 
-if (navbarToggle) {
-  navbarToggle.addEventListener("click", () => {
-    sideMenu.style.left = "0";
-    overlay.style.display = "block";
-  });
-}
-if (closeSideMenu) {
-  closeSideMenu.addEventListener("click", () => {
-    sideMenu.style.left = "-105%";
-    overlay.style.display = "none";
-  });
-}
-if (overlay) {
-  overlay.addEventListener("click", () => {
-    sideMenu.style.left = "-105%";
-    overlay.style.display = "none";
-  });
-}
-
-searchBtn.addEventListener("click", () => {
-  searchForm.classList.toggle("formPos");
-});
 
 deptBtn1.addEventListener("click", () => {
   deptBody.innerHTML = `

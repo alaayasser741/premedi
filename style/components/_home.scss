@@ -53,7 +53,7 @@
         &::before {
             content: '';
             position: absolute;
-            left: 100%;
+            inset-inline-start: 100%;
             top: 50%;
             transform: translateY(-50%);
             width: 0;
@@ -267,7 +267,7 @@
         width: 600px;
         position: absolute;
         bottom: 0;
-        left: 50%;
+        inset-inline-start: 50%;
         transform: translateX(-50%);
     }
 }
@@ -343,7 +343,7 @@
 
         img {
             width: 500px;
-            left: 100%;
+            inset-inline-start: 100%;
             transform: translateX(-70%);
         }
     }
@@ -375,7 +375,7 @@
 .specialist {
     padding-block: 9rem;
     background-color: var(--white);
-
+    block-size: 1000px;
     .container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -383,27 +383,44 @@
         gap: 1rem;
     }
 }
+@media (width < 1500px) {
+    .specialist{
+        block-size: auto;
+    }
+}
 
 .spec__card {
     position: relative;
     max-inline-size: 360px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
+    overflow: hidden;
+    block-size: 33rem;
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+        cursor: pointer;
+            block-size: auto;
+            transform: translateY(-1.5em);
         .card__info {
             background-color: var(--main-color);
             color: var(--white);
         }
 
         .info__time {
-            top: unset;
+            position: relative;
         }
     }
 
     overflow: hidden;
+}
 
+
+@media (width < 397px) {
+    .spec__card {
+        block-size: auto !important;
+        &:hover {
+            transform: translateY(-5px) !important;
+        }
+    }
 }
 
 .card__img {
@@ -437,7 +454,7 @@
             position: absolute;
             width: 3.5rem;
             bottom: -7px;
-            left: 50%;
+            inset-inline-start: 50%;
             transform: translateX(-50%);
             height: 2px;
             background-color: #ccc;
@@ -456,11 +473,11 @@
 
     .info__time {
         position: absolute;
-        left: 50%;
+        inset-inline-start: 50%;
         top: 105%;
         transform: translateX(-50%);
         width: 100%;
-
+        
         span {
             font-weight: 400;
         }
@@ -488,6 +505,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+        row-gap: 2rem;
     }
 }
 

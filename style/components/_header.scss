@@ -3,7 +3,7 @@ nav {
     max-height: 97px;
     position: relative;
     top: 0;
-    left: 0;
+    inset-inline-start: 0;
     width: 100%;
     z-index: 99999;
     background-color: var(--main-color);
@@ -15,7 +15,7 @@ nav {
         width: 200px;
         position: absolute;
         z-index: 0;
-        left: 0;
+        inset-inline-start: 0;
         width: 30%;
         top: 0;
         clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 100%);
@@ -53,15 +53,7 @@ nav {
         .toggle {
             display: none;
 
-            i {
-                font-size: 1.4rem;
-                padding: .5rem 1rem;
-                border: 2px solid var(--white);
-                border-radius: 7px;
-                -webkit-border-radius: 7px;
-                -moz-border-radius: 7px;
-                -ms-border-radius: 7px;
-                -o-border-radius: 7px;
+            svg {
                 cursor: pointer;
             }
         }
@@ -121,7 +113,7 @@ nav {
             .links {
                 position: fixed;
                 top: 0;
-                left: -105%;
+                inset-inline-start: -105%;
                 height: 100%;
                 width: 35%;
                 background-color: var(--main-color);
@@ -197,9 +189,9 @@ nav {
     background-color: var(--black);
     opacity: .7;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    inset-inline-start: 0;
     display: none;
 }
 
