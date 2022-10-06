@@ -100,7 +100,7 @@
         </div>
     </header>
     <!-- Blog Body -->
-    <div class="blog">
+    <div class="blog blog--single_blog">
         <div class="container">
             <div class="blog__News">
                 <div class="blog__post">
@@ -117,44 +117,54 @@
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                             ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                            consequat massa quis enim.</p>
-                        <a href="blog-single.html" class="__btn">Read More</a>
-                    </div>
-                </div>
-                <div class="blog__post">
-                    <div class="blog__img">
-                        <img src="images/post-6.png" alt="post-image">
-                    </div>
-                    <div class="post__text">
-                        <h3>Why Primary treatment is important?</h3>
-                        <div class="info__tags">
-                            <span><i class="icofont-user-alt-3"></i> Admin</span>
-                            <span><i class="icofont-calendar"></i> 10 Jan,2022</span>
-                            <span><i class="icofont-tag"></i> Web</span>
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
+                            pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+                            vulputate eleifend tellus.
+                            <br><br><br>
+                            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                            dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+                            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+                            ullamcorper ultricies nisi. </p>
+                        <div class="post__social">
+                            <a href="#"><i class="icofont-facebook"></i></a>
+                            <a href="#"><i class="icofont-twitter"></i></a>
+                            <a href="#"><i class="icofont-instagram"></i></a>
+                            <a href="#"><i class="icofont-pinterest"></i></a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                            consequat massa quis enim.</p>
-                        <a href="#" class="__btn">Read More</a>
-                    </div>
-                </div>
-                <div class="blog__post">
-                    <div class="blog__img">
-                        <img src="images/post-7.png" alt="post-image">
-                    </div>
-                    <div class="post__text">
-                        <h3>Why Primary treatment is important?</h3>
-                        <div class="info__tags">
-                            <span><i class="icofont-user-alt-3"></i> Admin</span>
-                            <span><i class="icofont-calendar"></i> 10 Jan,2022</span>
-                            <span><i class="icofont-tag"></i> Web</span>
+                        <div class="post__comments">
+                            <h4>COMMENTS</h4>
+                            <div class="comment">
+                                <img src="images/feedback_1.webp" alt="profile-Pic">
+                                <div class="comment__info">
+                                    <h5>Smite John</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <span id="replay-btn">Replay <i class="icofont-reply"></i></span>
+                                </div>
+                            </div>
+                            <div class="replay" id="replay">
+                                <img src="images/feedback_3.jpg" alt="profile-Pic">
+                                <div class="comment__info">
+                                    <h5>Daemon Targaryen</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <span>Replay <i class="icofont-reply"></i></span>
+                                </div>
+                            </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                            consequat massa quis enim.</p>
-                        <a href="#" class="__btn">Read More</a>
+                        <div class="post__add_replay">
+                            <h4>ADD REPLAY</h4>
+                            <form>
+                                <textarea required placeholder="Enter your message"></textarea>
+                                <div class="replay__info">
+                                    <input required type="text" placeholder="Name:">
+                                    <input required type="email" placeholder="E-mail:">
+                                    <input required type="tel" placeholder="Phone:">
+                                </div>
+                                <input type="submit" value="Send Message" class="__btn">
+
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -265,6 +275,14 @@
     </footer>
     <script src="script/nav-menu.js"></script>
     <script src="script/blog.js"></script>
+    <script>
+        const replayBtn = document.getElementById('replay-btn')
+        const replay = document.getElementById('replay')
+        replayBtn.addEventListener('click', () => {
+            replay.classList.toggle('active')
+            
+        })
+    </script>
 </body>
 
 </html>
