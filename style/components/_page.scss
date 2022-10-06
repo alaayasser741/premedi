@@ -1,0 +1,29 @@
+.service--bg-white{
+    background-color: var(--white);
+    .main-title{
+        margin-block-end: 5rem;
+    }
+}
+.Purchase{
+    padding-block: 4rem;
+    background-color: var(--main-color);
+    .container{
+        text-align: center;
+        color: var(--white);
+        line-height: 2;
+        h3{
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        p{
+            margin-bottom: 2rem;
+        }
+        .btn--bg-white{
+            background-color: var(--white);
+            color: var(--black);
+            border-radius: 5px;
+            padding: .5rem 1.5rem;
+        }
+    }
+}
