@@ -27,3 +27,33 @@
         }
     }
 }
+.partner{
+    padding-block:7rem ;
+    background-color: var(--white);
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+.partner__box{
+    inline-size: 250px;
+    block-size: 150px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    img{
+        inline-size: 100%;
+    }
+    &:hover{
+        background-color: var(--main-color);
+        img{
+            filter: brightness(0) invert(1);
+        }
+    }
+}
