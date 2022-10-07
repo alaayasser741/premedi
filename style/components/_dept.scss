@@ -1,0 +1,104 @@
+.book {
+    background-color: var(--white);
+    padding-block: 7rem;
+
+    .container {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-block-end: 2rem;
+    }
+}
+
+.book__FAQ {
+    flex-basis: 48%;
+}
+
+.book__sign_book {
+    flex-basis: 48%;
+}
+
+.quest__one {
+    inline-size: 100%;
+    padding: .7rem 1.5rem;
+    color: var(--black);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #ddd;
+
+    &:hover {
+        background-color: var(--main-color);
+        color: var(--white);
+    }
+}
+
+.quest__one.active {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.FAQ__quest {
+    margin-block-end: .7rem;
+    overflow: hidden;
+    p {
+        padding: 0;
+        height: 0;
+    }
+    .show--quest{
+        padding: 1rem 2.5rem;
+        height:auto ;
+    }
+}
+.book__sign_book{
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        input,select{
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border: 0;
+            outline: 0;
+            background-color: #ddd;
+            border-radius: 7px;
+            &::placeholder{
+                color: var(--black);
+                
+            }
+        }
+        select{
+            padding: 1rem;
+        }
+        [type="submit"]{
+            grid-column:1/3;
+            background-color: var(--main-color);
+            font-weight: 600;
+        }
+
+    }
+}
+@media (width < 991px){
+    .book{
+        .container{
+            flex-direction: column;
+        }
+    }
+}
+@media (width < 991px){
+    .book__sign_book{
+        form{
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
+}
