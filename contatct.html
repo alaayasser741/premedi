@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/icofont.min.css">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <!-- FavIcon -->
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <!-- <link rel="stylesheet" href="style/style.css"> -->
@@ -90,7 +92,25 @@
             </div>
         </div>
     </header>
-
+    <!-- Map -->
+    <div class="map">
+        <div id="map"></div>
+    </div>
+    <div class="form">
+        <div class="container">
+            <form>
+                <input required type="text" placeholder="Name:">
+                <input required type="email" placeholder="E-mail">
+                <textarea placeholder="Your message"></textarea>
+                <input required type="submit" value="Send Message">
+            </form>
+            <div class="form__info">
+                <span><i class="icofont-telephone"></i> +987 654 321</span>
+                <span><i class="icofont-ui-message"></i> <a href="mailto:zerocaps@gmail.com">zerocaps@gmail.com</a></span>
+                <span><i class="icofont-location-pin"></i> Egypt,Mansoura</span>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -129,6 +149,14 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="script/nav-menu.js"></script>
+    <script>
+        var map = L.map('map').setView([29.58,31], 6);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+    </script>
 </body>
 </html>
